@@ -3,109 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clai_web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            overflow: hidden;
-        }
+    
+    <link rel="stylesheet" href="class.css">
 
-        header {
-            text-align: center;
-            padding: 20px;
-            /* background-image: url('background.jpg'); */
-            background-size: cover;
-            background-position: center;
-            z-index: 1; /* Ensures the header is above the canvas */
-        }
-
-        section {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 2; /* Ensures the text is above the canvas */
-        }
-
-        h1 {
-            color: #fff;
-        }
-
-        h2 {
-            color: #ccc;
-        }
-
-        p {
-            color: #999;
-        }
-
-        /* box {
-
-        } */
-
-        cen {
-            text-align: center;
-            padding: 15px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-        }
-
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0; /* Lower z-index ensures the canvas is behind the text */
-            pointer-events: none; /* Ensures the canvas doesn't interfere with mouse events on text */
-        }
-    </style>
+    <title>clai's web</title>
 </head>
-
-<!-- right up add a circle photo -->
 
 <body>
     <header>
         <h1>clai's web</h1>
     </header>
 
-    <!-- <section> -->
-        <cen> article </cen>
-        <!-- box to press -->
-    <!-- </section> -->
 
-    <section>
-        <h2>About Me<br></h2>
-        <p>
-            A NYCU student interested in internet systems.<br><br>
-        </p>
+    <div class="wrapper">
+        <section>
+            <h2>About Me<br></h2>
+            <p>
+                A NYCU student interested in internet systems.<br><br>
+            </p>
 
-        <h2>Education</h2>
-        <p>
-            I changed my major from AM to CS in 2023 <br>
-            NYCU AM (2021 ~ 2023)            <br>
-            NYCU CS (2023 ~ )                <br><br>
-        </p>
+            <h2>Education</h2>
+            <p>
+                Changed major from AM to CS in 2023 <br>
+                NYCU AM (2021 ~ 2023)            <br>
+                NYCU CS (2023 ~ )                <br><br>
+            </p>
 
-        <h2>Skills</h2>
-        <p>
-            C / C++    <br>
-            Python     <br>
-            SQL        <br>
-            git        <br>
-            HTML / php <br>
-        </p>
-    </section>
+            <h2>Skills</h2>
+            <p>
+                C / C++    <br>
+                Python     <br>
+                SQL        <br>
+                git        <br>
+                HTML / php <br>
+            </p>
+        </section>
+    </div>
 
-    <footer>
+    <footer class="footer">
         <p>
             Contact: charlielai.15@gmail.com  <br>
             Website: www.temp.com <br>
@@ -113,8 +50,6 @@
         </p>
     </footer>
 
-    <canvas id="sakuraCanvas"></canvas>
-    <script src="anime.js"></script>
 </body>
 
 </html>
