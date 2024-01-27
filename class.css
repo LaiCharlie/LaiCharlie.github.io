@@ -47,6 +47,18 @@ p {
     color: #999;
 }
 
+/* .centext {
+    color: #fff;
+    text-align: center;
+} */
+
+.centext {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
 .cen {
     display: block;
     text-align: center;
@@ -80,6 +92,15 @@ p {
     color: #333;
 }
 
+.container {
+    text-align: center;
+    padding-left: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .wrapper {
     flex-grow: 1;
     /* display: flex; */
@@ -88,25 +109,31 @@ p {
     align-items: center; */
 } 
 
+
+.mainbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+
 .footer {
     bottom: 100px;
     text-align: center;
     background-color: rgb(0, 0, 0);
 }   
 
-
 #circle {
-    position: fixed;
     top: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     background-image: url('images/head.jpg');
     background-size: cover;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     border: none;
 }
@@ -118,8 +145,8 @@ p {
 #menu {
     position: fixed;
     top: 0;
-    left: -200px;
-    width: 200px;
+    left: -15%;
+    width: 15%;
     height: 100%;
     background-color: #4d4d4d;
     opacity: 0.8;

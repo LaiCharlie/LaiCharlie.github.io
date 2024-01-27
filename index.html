@@ -26,50 +26,69 @@
         <a href="https://github.com/LaiCharlie">Github</a>
     </div>
 
-    
-    <div class="wrapper">
+    <div class="container">
 
-        <br><br><br>
-        <section onclick="redirectToURL('aboutme.html')">
-            <div class="cen"> 
-                <h1><font color="#ffffff">交大資工 112上修課心得</font></h1>
+        <div class="mainbox">
+            <div id="circle" onclick="redirect()">
+                &nbsp;
             </div>
-        </section>
 
-        <br><br><br>
-        <section onclick="redirectToURL('index.html')">
-            <div class="cen"> 
-                <h1><font color="#ffffff">交大 應數轉資工心得</font></h1>
-            </div>
-        </section>
+            <a class="centext">
+                <p>
+                    test
+                </p>
+            </a>
         
-        <br><br><br>
-        <section onclick="redirectToURL('article/python/Python.html')">
-            <div class="cen"> 
-                <h1><font color="#ffffff">Python 語法</font></h1>
-            </div>
-        </section>
+            <script>
+                function redirect() {
+                    window.location.href = 'index.html';
+                }
+            </script>
+        </div>
+
+        <div class="wrapper">
+            <br><br><br>
+            <section onclick="redirectToURL('aboutme.html')">
+                <div class="cen"> 
+                    <h1><font color="#ffffff">交大資工 112上修課心得</font></h1>
+                </div>
+            </section>
+
+            <br><br><br>
+            <section onclick="redirectToURL('index.html')">
+                <div class="cen"> 
+                    <h1><font color="#ffffff">交大 應數轉資工心得</font></h1>
+                </div>
+            </section>
             
-        <br><br><br>
-        <section onclick="redirectToURL('index.html')">
-            <div class="cen"> 
-                <h1><font color="#ffffff">專題筆記</font></h1>
-            </div>
-        </section>
+            <br><br><br>
+            <section onclick="redirectToURL('article/python/Python.html')">
+                <div class="cen"> 
+                    <h1><font color="#ffffff">Python 語法</font></h1>
+                </div>
+            </section>
+                
+            <br><br><br>
+            <section onclick="redirectToURL('index.html')">
+                <div class="cen"> 
+                    <h1><font color="#ffffff">專題筆記</font></h1>
+                </div>
+            </section>
 
-        <br><br><br>
-        <section onclick="redirectToURL('index.html')">
-            <div class="cen"> 
-                <h1><font color="#ffffff">to be continue...</font></h1>
-            </div>
-        </section>
-        
-        <br><br> 
-        <script>
-            function redirectToURL(url) {
-                window.location.href = url;
-            }
-        </script>
+            <br><br><br>
+            <section onclick="redirectToURL('index.html')">
+                <div class="cen"> 
+                    <h1><font color="#ffffff">to be continue...</font></h1>
+                </div>
+            </section>
+            
+            <br><br> 
+            <script>
+                function redirectToURL(url) {
+                    window.location.href = url;
+                }
+            </script>
+        </div>
     </div>
 
     <footer class="footer">
@@ -79,7 +98,7 @@
         </p>
     </footer>
 
-    <div id="circle" onclick="redirect()">
+    <!-- <div id="circle" onclick="redirect()">
         &nbsp;
     </div>
 
@@ -87,7 +106,7 @@
         function redirect() {
             window.location.href = 'index.html';
         }
-    </script>
+    </script> -->
 
     <script src="menu.js"></script>  
 </body>
