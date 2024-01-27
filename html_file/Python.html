@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="mobile-web-app-capable" content="yes">
+      <title>
+         Python基礎教學
+      </title>
+      <link rel="icon" href="../images/icon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+      <style>
+         @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{background-color:#eaffea;color:#55a532}.hljs-deletion{background-color:#ffecec;color:#bd2c00}.hljs-link{text-decoration:underline}.markdown-body{word-wrap:break-word;font-size:16px;line-height:1.5}.markdown-body:after,.markdown-body:before{content:"";display:table}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-bottom:16px;margin-top:0}.markdown-body hr{background-color:#e7e7e7;border:0;height:.25em;margin:24px 0;padding:0}.markdown-body blockquote{border-left:.25em solid #ddd;color:#777;font-size:16px;padding:0 1em}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb;color:#555;display:inline-block;font-size:11px;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{border-bottom:1px solid #eee;padding-bottom:.3em}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{color:#777;font-size:.85em}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{list-style-type:none;padding:0}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-bottom:0;margin-top:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{font-size:1em;font-style:italic;font-weight:700;margin-top:16px;padding:0}.markdown-body dl dd{margin-bottom:16px;padding:0 16px}.markdown-body table{display:block;overflow:auto;width:100%;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{border:1px solid #ddd;padding:6px 13px}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{background-color:#fff;box-sizing:initial;max-width:100%}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{background-color:initial;max-width:none;vertical-align:text-top}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{border:1px solid #ddd;display:block;float:left;margin:13px 0 0;overflow:hidden;padding:7px;width:auto}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0}.markdown-body span.align-center{clear:both;display:block;overflow:hidden}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{clear:both;display:block;overflow:hidden}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{background-color:#0000000a;border-radius:3px;font-size:85%;margin:0;padding:.2em 0}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{content:"\00a0";letter-spacing:-.2em}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{background:#0000;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{border-radius:3px;font-size:85%;line-height:1.45;overflow:auto}.markdown-body:not(.next-editor) pre{background-color:#f7f7f7;padding:16px}.markdown-body pre code,.markdown-body pre tt{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{background:#fff;border:0;padding:10px 8px 9px;text-align:right}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{background:#f8f8f8;border-top:0;font-weight:700}.news .alert .markdown-body blockquote{border:0;padding:0 0 0 40px}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{cursor:default!important;float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle}.markdown-body{max-width:758px;overflow:visible!important;padding-bottom:40px;padding-top:40px;position:relative}.markdown-body.next-editor{overflow-x:hidden!important}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{border-right:3px solid #6ce26c!important;box-sizing:initial;color:#afafaf!important;cursor:default;display:inline-block;min-width:20px;padding:0 8px 0 0;position:relative;text-align:right;z-index:4}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-bottom:none;border-left:none;border-top:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-collapse:inherit!important;border-spacing:0}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{margin-bottom:unset;overflow:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert{display:flex;flex-direction:column;gap:16px}.markdown-body .alert>*{margin:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{background-color:inherit;border-radius:0;overflow:visible;text-align:center;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{height:100%;max-width:100%}.markdown-body pre>code.wrap{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{background-color:#000;background-position:50%;background-repeat:no-repeat;background-size:contain;cursor:pointer;display:table;overflow:hidden;text-align:center}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{object-fit:contain;width:100%;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{height:100%;left:0;position:absolute;top:0;width:100%}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{color:#fff;height:auto;left:50%;opacity:.3;position:absolute;top:50%;transform:translate(-50%,-50%);transition:opacity .2s;width:auto;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.figma{display:table;padding-bottom:56.25%;position:relative;width:100%}.figma iframe{border:1px solid #eee;bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.markmap-container{height:300px}.markmap-container>svg{height:100%;width:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{color:#777;margin:25px auto -25px;max-width:760px;position:relative;z-index:2}.toc .invisable-node{list-style-type:none}.ui-toc{bottom:20px;position:fixed;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{border-bottom-left-radius:0;border-top-left-radius:0;height:40px;padding:10px 4px}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{color:#fff;opacity:1;transition:opacity .2s}.ui-toc-label:focus{background-color:#ccc;color:#000;opacity:.3}.ui-toc-label:hover{background-color:#ccc;opacity:1;transition:opacity .2s}.ui-toc-dropdown{margin-bottom:20px;margin-top:20px;max-height:70vh;max-width:45vw;overflow:auto;padding-left:10px;padding-right:10px;text-align:inherit;width:25vw}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{letter-spacing:.0029em;padding-right:0}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{color:#767676;display:block;font-size:13px;font-weight:500;padding:4px 20px}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{background-color:initial;border-left:1px solid #000;color:#000;padding-left:19px;text-decoration:none}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{border-left:none;border-right:1px solid #000;padding-right:19px}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{background-color:initial;border-left:2px solid #000;color:#000;font-weight:700;padding-left:18px}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{border-left:none;border-right:2px solid #000;padding-right:18px}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:30px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:40px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{font-weight:500;padding-left:28px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{font-weight:500;padding-left:38px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{max-height:70vh;max-width:15vw;overflow:auto;position:fixed;top:0}.back-to-top,.expand-toggle,.go-to-bottom{color:#999;display:block;font-size:12px;font-weight:500;margin-left:10px;margin-top:10px;padding:4px 10px}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{background-position:50%;background-repeat:no-repeat;background-size:cover;border-radius:50%;display:block;height:20px;margin-bottom:2px;margin-right:5px;margin-top:2px;width:20px}.ui-user-icon.small{display:inline-block;height:18px;margin:0 0 .2em;vertical-align:middle;width:18px}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;padding-left:22px;text-decoration:none}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}.inline-spoiler-section{cursor:pointer}.inline-spoiler-section .spoiler-text{background-color:#333;border-radius:2px}.inline-spoiler-section .spoiler-text>*{opacity:0}.inline-spoiler-section .spoiler-img{filter:blur(10px)}.inline-spoiler-section.raw{background-color:#333;border-radius:2px}.inline-spoiler-section.raw>*{opacity:0}.inline-spoiler-section.unveil{cursor:auto}.inline-spoiler-section.unveil .spoiler-text{background-color:#3333331a}.inline-spoiler-section.unveil .spoiler-text>*{opacity:1}.inline-spoiler-section.unveil .spoiler-img{filter:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{color:#222;position:relative;z-index:1}.markdown-body.slides:before{background-color:currentColor;bottom:0;box-shadow:0 0 0 50vw;content:"";display:block;left:0;position:absolute;right:0;top:0;z-index:-1}.markdown-body.slides section[data-markdown]{background-color:#fff;margin-bottom:1.5em;position:relative;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{left:1em;max-height:100%;overflow:hidden;position:absolute;right:1em;top:50%;transform:translateY(-50%)}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{border:3px solid #777;content:"";height:1.5em;position:absolute;right:1em;top:-1.5em}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}svg{text-shadow:none}
+      </style>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+      <![endif]-->
+   </head>
+
+
+   <body>
+      <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true">
+         <h1 id="Python-基礎教學" data-id="Python-基礎教學" data-original-title="" title=""><a class="anchor hidden-xs" href="#Python-基礎教學" title="Python-基礎教學"><span class="octicon octicon-link"></span></a><span>Python  基礎教學</span></h1>
+         <h2 data-id="個人網站" id="個人網站"><a class="anchor hidden-xs" href="#個人網站" title="個人網站"><span class="octicon octicon-link"></span></a><span>個人網站</span></h2>
+         <p><a href="../index.html"><span>main page</span></a></p>
+
+         <h2 id="變數型態" data-id="變數型態"><a class="anchor hidden-xs" href="#變數型態" title="變數型態"><span class="octicon octicon-link"></span></a><span>變數型態</span></h2>
+         <h3 id="int" data-id="int"><a class="anchor hidden-xs" href="#int" title="int"><span class="octicon octicon-link"></span></a><span>int</span></h3>
+         <p><span>int就是integer(整數)的縮寫</span><br>
+            <span>可以與float做加減乘除類的運算</span><br>
+            <span>也可以與String相乘(在String的部分會說明)</span>
+         </p>
+         <pre><code>x = 1
+print(type(x))
+
+Output : 
+&lt;class 'int'&gt;
+</code></pre>
+         <blockquote>
+            <p><strong><span>Note :</span></strong><span> 在 python 中，int 的範圍是沒有極限的，所以進行大數運算不需要考慮範圍</span></p>
+         </blockquote>
+         <h4 id="int補充" data-id="int補充"><a class="anchor hidden-xs" href="#int補充" title="int補充"><span class="octicon octicon-link"></span></a><span>int補充</span></h4>
+         <p><span>我們在Python中通常是以十進制(decimal)來表達int</span><br>
+            <span>但Python也讀得懂2進制、8進制與16進制</span><br>
+            <span>以下直接舉例說明</span>
+         </p>
+         <pre><code># 0b : 2進位(binary) 
+# 0o : 8進位(octal) 
+# 0x : 16進位(hexadecimal)
+
+x = 0b0010
+print(x)
+# 0b代表進位法，0010在二進位中 = 十進位的2
+# 0後面的英文大小寫都可 : (0B0010=0b0010)
+
+Output : 
+2
+</code></pre>
+         <p><strong><span>Note:</span></strong><br>
+            <span>在Python中,井字號(#)是註解的意思</span><br>
+            <span>註解的程式碼是不會被執行的！！！</span><br>
+            <span>如果要一次註解多行的話，可以利用鍵盤快捷鍵</span>
+         </p>
+         <blockquote>
+            <p><span>反白想註解的行數：</span><br>
+               <span>Windows：同時按下 control 與  /</span><br>
+               <span>MacOS：同時按下 command 與  /</span><br>
+               <strong><span>Note:</span></strong><span> 若是單行註解則不需要反白</span>
+            </p>
+         </blockquote>
+         <h3 id="float" data-id="float"><a class="anchor hidden-xs" href="#float" title="float"><span class="octicon octicon-link"></span></a><span>float</span></h3>
+         <p><span>在Python中，帶有小數點的數字都屬於float</span><br>
+            <span>在下面的例子中，如果我們將整數加上1.0時</span><br>
+            <span>y的資料型態就變成float</span><br>
+            <span>是因為1.0是float的資料型態</span><br>
+            <strong><span>Note:</span></strong><br>
+            <span>在Python裡， 1. 就是1.0的意思，同理 .1 就是0.1</span>
+         </p>
+         <pre><code>x = 1
+y = x + 1.
+print(type(y))
+
+Output : 
+&lt;class 'float'&gt;
+</code></pre>
+         <h3 id="string" data-id="string"><a class="anchor hidden-xs" href="#string" title="string"><span class="octicon octicon-link"></span></a><span>string</span></h3>
+         <p><span>String是字串的意思</span><br>
+            <span>在Python的語法裡，字串可以用兩種方式表達 :</span>
+         </p>
+         <pre><code># First : 
+str = "I am String"
+# Second : 
+str = 'I am String'
+</code></pre>
+         <p><span>Python的語法，用 “” 或 ‘’ 都是可以的</span><br>
+            <span>Python中的String也支援加法跟乘法</span><br>
+            <span>用法：</span><br>
+            <span>1.加法：String1 + String2</span><br>
+            <span>（加號兩邊的資料型態都必須是String）</span><br>
+            <span>2.乘法：int * String or String * int</span><br>
+            <span>（乘號兩邊必須是int與String)</span>
+         </p>
+         <pre><code>str1 = "I am "
+str2 = 'String'
+temp = 3
+print(str1+str2) 
+print(temp*str1)
+print(str2*temp)
+
+Output : 
+I am String
+I am I am I am 
+StringStringString
+</code></pre>
+         <p><span>若是想一次輸出多行，也可以利用 “”" 來實現</span><br>
+            <span>範例：</span>
+         </p>
+         <pre><code>str = """ 
+I
+AM
+PYTHON
+PROGRAMMER
+"""
+print(str)
+
+Output : 
+I
+AM
+PYTHON
+PROGRAMMER
+</code></pre>
+         <h3 id="bool" data-id="bool"><a class="anchor hidden-xs" href="#bool" title="bool"><span class="octicon octicon-link"></span></a><span>bool</span></h3>
+         <p><span>bool資料型態很簡單，只有兩種類型：True 跟 False</span><br>
+            <strong><span>Note : T 跟 F 都要大寫</span></strong>
+         </p>
+         <pre><code>cmp = 1 &gt; 0
+print(cmp)
+print(type(cmp))
+
+Output : 
+True
+&lt;class 'bool'&gt;
+</code></pre>
+         <p><span>bool也可以與int的資料型態相互轉換：</span><br>
+            <span>bool 轉 int:</span><br>
+            <span>True 會轉換成 1 , False 轉換成 0</span>
+         </p>
+         <pre><code>cmp = False
+x = int(cmp)
+print(cmp)
+print(x)
+
+Output : 
+False
+0
+</code></pre>
+         <p><span>int 轉 bool:</span><br>
+            <strong><span>所有非0的數</span></strong><span>都會轉成True , 只有0會轉成False</span><br>
+            <strong><span>Note</span></strong><span>: </span><strong><span>所有非0</span></strong><span>的float也都可以轉換成True</span>
+         </p>
+         <pre><code>cmp = -1
+T = bool(cmp)
+print(T)
+print(type(T))
+
+Output : 
+True
+&lt;class 'bool'&gt;
+</code></pre>
+         <h3 id="變數宣告" data-id="變數宣告"><a class="anchor hidden-xs" href="#變數宣告" title="變數宣告"><span class="octicon octicon-link"></span></a><span>變數宣告</span></h3>
+         <p><span>在Python中，變數宣告的語法非常簡單</span><br>
+            <span>變數名稱 ＝ value</span><br>
+            <span>以下是幾個例子</span>
+         </p>
+         <pre><code> x   = 1
+ y   = 1.
+ z   = .1
+str  = "1"
+cmp  = (1 &gt; 0)  # cmp = True
+</code></pre>
+         <blockquote>
+            <p><span>在設定變數名稱時有三點需要特別注意：</span><br>
+               <span>1.不能用Python設定的Keyword</span><br>
+               <span>2.不能有空白(可以用底線)</span><br>
+               <span>3.不能以數字開頭</span>
+            </p>
+         </blockquote>
+         <h4 id="Keyword" data-id="Keyword"><a class="anchor hidden-xs" href="#Keyword" title="Keyword"><span class="octicon octicon-link"></span></a><span>Keyword</span></h4>
+         <p><span>Keyword是Python內建帶有特殊意義的字串(String)</span></p>
+         <pre><code>KeywordList : 
+'False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class',
+'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from',
+'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass',
+'raise', 'return', 'try', 'while', 'with', 'yield'
+</code></pre>
+         <h2 id="函式介紹function" data-id="函式介紹function"><a class="anchor hidden-xs" href="#函式介紹function" title="函式介紹function"><span class="octicon octicon-link"></span></a><span>函式介紹(function)</span></h2>
+         <p><span>Python中，function大致分為兩種：</span><br>
+            <span>1.內建好的(build-in function)</span><br>
+            <span>2.開發者自訂(Definition by programmer)</span>
+         </p>
+         <blockquote>
+            <p><span>用法：</span><br>
+               <span>functionName()</span><br>
+               <span>括號內為傳入function的參數，也可以不傳入任何參數</span>
+            </p>
+         </blockquote>
+         <p><strong><span>Note :</span></strong><br>
+            <span>function執行完後通常會return value</span><br>
+            <span>（也可以不回傳任何資料）</span>
+         </p>
+         <blockquote>
+            <p><strong><span>補充：</span></strong><br>
+               <span>method : function的一種，是屬於特定物件的function</span><br>
+               <span>用法：</span><br>
+               <span>objectName.method()</span>
+            </p>
+         </blockquote>
+         <p><span>現在先介紹 build-in function</span><br>
+            <span>build-in function 是Python已經內建好的function</span><br>
+            <span>不需import任何module即可使用</span>
+         </p>
+         <h3 id="print" data-id="print"><a class="anchor hidden-xs" href="#print" title="print"><span class="octicon octicon-link"></span></a><span>print()</span></h3>
+         <p><span>Python內建的輸出函式</span><br>
+            <span>在print()括號內的資料皆會輸出</span><br>
+            <span>可以輸出幾乎所有資料型態:int, float, bool, string, dictionary, list, tuple, …</span><br>
+            <span>接下來看例子來學習用法：</span>
+         </p>
+         <pre><code>print("Hello World!")
+print("Hello" , "World!")
+#超過一個資料需要輸出時，需要用','來分隔
+
+Output : 
+Hello World!
+Hello World!
+</code></pre>
+         <p><strong><span>Note :</span></strong><span> 換行字元：‘\n’</span><br>
+            <span>用法：直接加在字串中即可</span>
+         </p>
+         <pre><code>print("Hello\nWorld\n!")
+# print("Hello" + "\n" + "World" + '\n' + '!') #(輸出與第一行相同)
+# print("Hello" , "World" , '!' , sep='\n')    #(輸出與第一行相同)
+
+Output : 
+Hello
+World
+!
+</code></pre>
+         <p><strong><span>sep , end 用法：</span></strong></p>
+         <pre><code># sep 只會在超過一個data要輸出時起作用
+# 用法 : 在想輸出的data後加上 sep= ""
+# example ：
+print("Hello" , "World!",sep = "--")
+
+Output : 
+Hello--World!
+</code></pre>
+         <pre><code># end 設定輸出結束後輸出的字串 ， 預設為'\n'(換行字元)
+# 用法 : 在想輸出的data後加上 end= ""
+# example ：
+print("Hello" , "World!",end = "--")
+print("~~~~")
+
+Output : 
+Hello World!--~~~~
+</code></pre>
+         <p><strong><span>同時使用 end &amp; sep</span></strong><br>
+            <strong><span>Note :</span></strong><span> sep與end之間的順序不影響輸出結果</span>
+         </p>
+         <pre><code>sepstr = "--sep--"
+print("Hello","World!" , end = "--\n" ,sep = sepstr )
+
+Output:
+Hello--sep--World!--
+</code></pre>
+         <h3 id="input" data-id="input"><a class="anchor hidden-xs" href="#input" title="input"><span class="octicon octicon-link"></span></a><span>input()</span></h3>
+         <p><span>Python內建的輸入函式</span><br>
+            <span>在input()括號內可以填入字串</span><br>
+            <span>input()被呼叫時會輸出括號內的字串</span><br>
+            <strong><span>Note :</span></strong><span> 通常會宣告變數來儲存input()內容</span><br>
+            <strong><span>Note :</span></strong><span> input() 的 return dataType 預設為string</span>
+         </p>
+         <pre><code>x = input("Please input-&gt;")
+print(x * 2)
+
+Input : 
+1
+Output : 
+Please input-&gt;
+11
+# Since input datatype is string , so '1'*2 = '11'
+</code></pre>
+         <h4 id="將input的dataType轉為int" data-id="將input的dataType轉為int"><a class="anchor hidden-xs" href="#將input的dataType轉為int" title="將input的dataType轉為int"><span class="octicon octicon-link"></span></a><span>將input()的dataType轉為int</span></h4>
+         <pre><code># 將input()放在int()的括號裡
+# Note : int() is a function which can change dataType
+x = int(input())
+print(x * 2)
+
+Input :
+1
+Output :
+2
+# int('1') = 1 , 1 * 2 = 2
+</code></pre>
+         <p><span>在這個例子裡，如果輸入的data無法轉換為int時就會引發</span><strong><span>Error</span></strong><br>
+            <span>ex: 如果Input data改為 a</span><br>
+            <span>程式就無法正常進行 : ValueError: invalid literal for int() with base 10: ‘a’</span>
+         </p>
+         <h4 id="將input的dataType轉為float" data-id="將input的dataType轉為float"><a class="anchor hidden-xs" href="#將input的dataType轉為float" title="將input的dataType轉為float"><span class="octicon octicon-link"></span></a><span>將input()的dataType轉為float</span></h4>
+         <pre><code># 將input()放在float()的括號裡
+# Note : float() is a function which can change dataType
+x = float(input())
+print(x * 2)
+
+Input :
+1.0
+Output :
+2.0
+# float('1.0') = 1.0 , 1.0 * 2 = 2.0
+</code></pre>
+         <p><span>在這個例子裡，如果輸入的data無法轉換為float時就會引發</span><strong><span>Error</span></strong><br>
+            <span>ex: 如果Input data改為 a</span><br>
+            <span>程式就無法正常進行 : ValueError: invalid literal for float() with base 10: ‘a’</span>
+         </p>
+         <h3 id="其他-build-in-functions" data-id="其他-build-in-functions"><a class="anchor hidden-xs" href="#其他-build-in-functions" title="其他-build-in-functions"><span class="octicon octicon-link"></span></a><span>其他 build-in functions:</span></h3>
+         <h4 id="int1" data-id="int"><a class="anchor hidden-xs" href="#int1" title="int1"><span class="octicon octicon-link"></span></a><span>int()</span></h4>
+         <p><span>將傳入的資料的dataType轉為int</span><br>
+            <span>return type : int</span><br>
+            <span>用法：</span>
+         </p>
+         <pre><code>x = "123"
+y = int(x)
+print(type(x),type(y))
+
+Output : 
+&lt;class 'str'&gt; &lt;class 'int'&gt;
+</code></pre>
+         <h4 id="float1" data-id="float"><a class="anchor hidden-xs" href="#float1" title="float1"><span class="octicon octicon-link"></span></a><span>float()</span></h4>
+         <p><span>將傳入的資料的dataType轉為float</span><br>
+            <span>return type : float</span><br>
+            <span>用法：</span>
+         </p>
+         <pre><code>x = "123.456"
+y = float(x) 
+print(type(x),type(y))
+
+Output : 
+&lt;class 'str'&gt; &lt;class 'float'&gt;
+</code></pre>
+         <h4 id="str" data-id="str"><a class="anchor hidden-xs" href="#str" title="str"><span class="octicon octicon-link"></span></a><span>str()</span></h4>
+         <p><span>將傳入的資料的dataType轉為string</span><br>
+            <span>return type : string</span><br>
+            <span>用法：</span>
+         </p>
+         <pre><code>x = 123
+y = str(x)
+print(type(x),type(y))
+
+Output : 
+&lt;class 'int'&gt; &lt;class 'str'&gt;
+</code></pre>
+         <h4 id="type" data-id="type"><a class="anchor hidden-xs" href="#type" title="type"><span class="octicon octicon-link"></span></a><span>type()</span></h4>
+         <p><span>回傳 “傳入的資料的dataType”</span><br>
+            <span>return type : type</span><br>
+            <span>用法：</span>
+         </p>
+         <pre><code>x = 123
+print(type(x))
+
+Output : 
+&lt;class 'int'&gt;
+</code></pre>
+         <h4 id="ord-amp-chr" data-id="ord-amp-chr"><a class="anchor hidden-xs" href="#ord-amp-chr" title="ord-amp-chr"><span class="octicon octicon-link"></span></a><span>ord() &amp; chr()</span></h4>
+         <p><strong><span>ord() :</span></strong><br>
+            <span>return type : int</span><br>
+            <span>用法：</span>
+         </p>
+         <pre><code>x = "A"
+y = ord(x)
+print(y,type(y))
+
+Output : 
+65 &lt;class 'int'&gt;
+</code></pre>
+         <p><strong><span>chr() :</span></strong><br>
+            <span>return type : string</span><br>
+            <span>用法：</span>
+         </p>
+         <pre><code>x = 65
+y = chr(x)
+print(y,type(y))
+
+Output : 
+A &lt;class 'str'&gt;
+</code></pre>
+         <blockquote>
+            <p><span>ord(chr(x)) = x</span><br>
+               <span>chr(ord(y)) = y</span><br>
+               <span>chr() &amp; ord() function use ASCII table 來對照數字與字元</span>
+            </p>
+         </blockquote>
+         <h4 id="max" data-id="max"><a class="anchor hidden-xs" href="#max" title="max"><span class="octicon octicon-link"></span></a><span>max()</span></h4>
+         <p><span>return Type : int , string</span><br>
+            <span>return int 用法：</span>
+         </p>
+         <pre><code>print(max(1,2,3,4,5,6,7,8))
+
+Output:
+8
+# 如果只傳入一個整數 -&gt; TypeError
+# TypeError: 'int' object is not iterable
+</code></pre>
+         <pre><code># 上面例子的第二種寫法
+list = [i+1 for i in range(8)]
+print(max(list))
+</code></pre>
+         <p><strong><span>Note :</span></strong><span> list將會在之後的筆記教學</span></p>
+         <p><span>return string 用法：</span></p>
+         <pre><code>print(max("abc"))
+print(max("abc","cba"))
+
+Output:
+c
+cba
+# c &gt; b &gt; a in ASCII table
+# 比較字串時會從第一個字元開始比，相同則比較下一個字元
+# 相同到最後時回傳較長字串
+</code></pre>
+         <h4 id="min" data-id="min"><a class="anchor hidden-xs" href="#min" title="min"><span class="octicon octicon-link"></span></a><span>min()</span></h4>
+         <p><span>return Type : int or string</span><br>
+            <span>用法：同 max()</span>
+         </p>
+         <h3 id="自訂function" data-id="自訂function"><a class="anchor hidden-xs" href="#自訂function" title="自訂function"><span class="octicon octicon-link"></span></a><span>自訂function</span></h3>
+         <p><strong><span>Note :</span></strong><br>
+            <span>Python很注重對齊，def的下一行要加一個Tab來表示def尚未結束</span><br>
+            <span>若下一行開頭沒有Tab，就代表def定義的結束</span><br>
+            <span>語法：</span>
+         </p>
+         <pre><code>def functionName(參數1,參數2):
+    pass
+# pass通常在function還未寫入任何程式碼時使用
+# 如果function內沒有程式碼時被呼叫 -&gt; Error
+# IndentationError: expected an indented block after function definition
+# 可以不傳入任何參數
+# function name 不可設為 Keyword
+</code></pre>
+         <p><span>例子1：</span></p>
+         <pre><code>def plus(a , b):
+    c = a + b
+    return c
+    
+x = "abc"
+y = "def"
+z = plus(x,y)
+print(z)
+
+Output : 
+abcdef
+</code></pre>
+         <p><span>例子2：</span></p>
+         <pre><code>def Print_plus(a , b):
+    c = a + b
+    print(c)
+    
+x = "abc"
+y = "def"
+z = Print_plus(x,y)
+
+Output : 
+abcdef
+</code></pre>
+         <h4 id="lambda-anonymous-function" data-id="lambda-anonymous-function"><a class="anchor hidden-xs" href="#lambda-anonymous-function" title="lambda-anonymous-function"><span class="octicon octicon-link"></span></a><span>lambda (anonymous function)</span></h4>
+         <p><span>lambda 也是 function 的一種</span><br>
+            <span>語法：</span>
+         </p>
+         <pre><code>lambda parameters: expression
+</code></pre>
+         <p><span>例子：</span></p>
+         <pre><code>two = lambda: 2
+sqr = lambda x: x * x
+pwr = lambda x, y: x ** y
+
+T = two()
+S = sqr(2)
+P = pwr(2,3)
+print(T,S,P)
+
+Output :
+2 4 8
+</code></pre>
+         <h2 id="基本-Operator-介紹-（加減乘除）" data-id="基本-Operator-介紹-（加減乘除）"><a class="anchor hidden-xs" href="#基本-Operator-介紹-（加減乘除）" title="基本-Operator-介紹-（加減乘除）"><span class="octicon octicon-link"></span></a><span>基本 Operator 介紹 （加減乘除）</span></h2>
+         <h3 data-id="" id="tip1"><span>+</span></h3>
+         <p><span>分為binary,unary兩種</span></p>
+         <h4 id="binary-" data-id="binary-"><a class="anchor hidden-xs" href="#binary-" title="binary-"><span class="octicon octicon-link"></span></a><span>binary :</span></h4>
+         <p><span>範例用法：</span></p>
+         <pre><code>a = 1
+b = 2
+c = a + b
+print(a,b,c)
+
+Output : 
+1 2 3
+</code></pre>
+         <h4 id="unary-" data-id="unary-"><a class="anchor hidden-xs" href="#unary-" title="unary-"><span class="octicon octicon-link"></span></a><span>unary :</span></h4>
+         <p><span>範例用法：</span></p>
+         <pre><code>a = -1
+b = +a
+print(a,b)
+
+Output : 
+-1 -1
+</code></pre>
+         <h3 id="-" data-id="-"><a class="anchor hidden-xs" href="#-" title="-"><span class="octicon octicon-link"></span></a><span>-</span></h3>
+         <p><span>分為binary,unary兩種</span></p>
+         <h4 id="binary-1" data-id="binary-"><a class="anchor hidden-xs" href="#binary-1" title="binary-1"><span class="octicon octicon-link"></span></a><span>binary :</span></h4>
+         <p><span>範例用法：</span></p>
+         <pre><code>a = 1
+b = 2
+c = a - b
+print(a,b,c)
+
+Output :
+1 2 -1
+</code></pre>
+         <h4 id="unary-1" data-id="unary-"><a class="anchor hidden-xs" href="#unary-1" title="unary-1"><span class="octicon octicon-link"></span></a><span>unary :</span></h4>
+         <p><span>範例用法：</span></p>
+         <pre><code>a = 1
+b = -a
+print(a,b)
+
+Output :
+1 -1
+</code></pre>
+         <h3 data-id="" id="tip2"><span>*</span></h3>
+         <p><span>'*'在Python裡是乘號</span><br>
+            <span>範例用法：</span>
+         </p>
+         <pre><code>a = 1
+b = 2
+c = a * b
+print(a,b,c)
+
+Output :
+1 2 2
+</code></pre>
+         <h3 data-id="" id="tip3"><span>/</span></h3>
+         <p><span>‘/’ 在Python裡是除號</span><br>
+            <span>範例用法：</span>
+         </p>
+         <pre><code>a = 2
+b = 1
+c = a / b
+print(a,b,c)
+
+Output :
+1 2 2.0
+</code></pre>
+         <p><strong><span>Note :</span></strong><span> 只要經過除法運算，就算沒有餘數，dataType也會轉換成float</span></p>
+         <h3 data-id="" id="tip4"><span>**</span></h3>
+         <p><span>在Python中兩個乘號是次方的意思</span><br>
+            <span>範例用法：</span>
+         </p>
+         <pre><code>a = 2
+b = 10
+c = a**b
+print(a,b,c)
+
+Output :
+2 10 1024
+</code></pre>
+         <h3 data-id="" id="tip5"><span>//</span></h3>
+         <p><span>在Python中兩個除號是整除的意思</span><br>
+            <span>會無條件捨去小數部分</span><br>
+            <span>範例用法：</span>
+         </p>
+         <pre><code>a = 2 ; b = 10
+c = b//a
+d = 3 ; e = 2
+f = d//e
+print(c,f)
+
+Output :
+5 1
+</code></pre>
+         <p><strong><span>Note:</span></strong><span> 若要在一行內宣告不同的變數並賦值，則需要用分號(;)隔開</span></p>
+         <h3 data-id="" id="tip6"><span>%</span></h3>
+         <p><span>在Python中%是取餘數的意思</span><br>
+            <span>範例用法：</span>
+         </p>
+         <pre><code>a = 10
+b = 3
+c = a%b
+print(a,b,c)
+
+Output :
+10 3 1
+</code></pre>
+         <h3 id="比較operator" data-id="比較operator"><a class="anchor hidden-xs" href="#比較operator" title="比較operator"><span class="octicon octicon-link"></span></a><span>比較operator</span></h3>
+         <ul>
+            <li><span>a==b :判斷左右變數是否</span><strong><span>相等</span></strong></li>
+            <li><span>a!=b :判斷左右變數是否</span><strong><span>不相等</span></strong></li>
+            <li><span>a&gt;b :判斷左變數是否</span><strong><span>大於</span></strong><span>右變數</span></li>
+            <li><span>a&lt;b :判斷左變數是否</span><strong><span>小於</span></strong><span>右變數</span></li>
+            <li><span>a&gt;=b : 判斷左變數是否</span><strong><span>大於等於</span></strong><span>右變數</span></li>
+            <li><span>a&lt;=b : 判斷左變數是否</span><strong><span>小於等於</span></strong><span>於右變數</span></li>
+         </ul>
+         <h2 id="if-else-用法" data-id="if-else-用法"><a class="anchor hidden-xs" href="#if-else-用法" title="if-else-用法"><span class="octicon octicon-link"></span></a><span>if-else 用法</span></h2>
+         <p><span>語法：</span></p>
+         <pre><code>if 條件 :
+    內容
+    內容
+當條件為True時，內容才會被執行
+</code></pre>
+         <p><strong><span>Note:</span></strong><span> Python很注重對齊，if的下一行要加一個Tab來表示if尚未結束</span><br>
+            <span>若下一行開頭沒有Tab，就代表if的結束</span><br>
+            <span>範例用法：</span>
+         </p>
+         <pre><code>a = 1
+b = 2
+if a&gt;b :
+    print("a&gt;b")
+
+Output:
+
+# 沒有輸出,因為a&lt;b
+</code></pre>
+         <p><strong><span>加入else：</span></strong><br>
+            <span>語法：</span>
+         </p>
+         <pre><code>if 條件 :
+    內容
+    內容
+else:
+    內容
+</code></pre>
+         <p><span>範例用法：</span></p>
+         <pre><code>a = 1
+b = 2
+if a&gt;b :
+    print("a&gt;b")
+else:
+    print("a&lt;b")
+    
+Output:
+a&lt;b
+</code></pre>
+         <p><strong><span>加入elif：</span></strong><br>
+            <span>語法：</span>
+         </p>
+         <pre><code>if 條件1 :
+    內容
+    內容
+elif 條件2:
+    內容
+elif 條件3:
+    內容
+</code></pre>
+         <p><span>範例用法：</span></p>
+         <pre><code>a = 1
+b = 2
+if a&gt;b :
+    print("a&gt;b")
+elif a&gt;0 :
+    print("a&gt;0")
+elif(a&lt;b):
+    print("a&lt;b")
+
+Output:
+a&gt;0
+</code></pre>
+         <p><strong><span>同時使用elif else：</span></strong><br>
+            <span>語法：</span>
+         </p>
+         <pre><code>if 條件1 :
+    內容
+    內容
+elif 條件2:
+    內容
+elif 條件3:
+    內容
+else:
+    內容
+</code></pre>
+         <p><span>範例用法：</span></p>
+         <pre><code>a = 1
+b = 2
+if a&gt;b :
+    print("a&gt;b")
+elif a&gt;0 :
+    print("a&gt;0")
+elif(a&lt;b):
+    print("a&lt;b")
+else:
+    print("else")
+
+Output:
+a&gt;0
+</code></pre>
+         <p><strong><span>Note:</span></strong><span> Python會按照順序往下執行，只要上面的elif被執行，下面的elif與else就都不會進行判斷</span></p>
+         <h3 id="and--or--not" data-id="and--or--not"><a class="anchor hidden-xs" href="#and--or--not" title="and--or--not"><span class="octicon octicon-link"></span></a><span>and , or , not</span></h3>
+         <p><strong><span>Note:</span></strong><span> and , or , not 都是Keyword</span><br>
+            <span>優先順序：not -&gt; and -&gt; or(越前面代表越先判斷)</span><br>
+            <span>用法：在一個if內同時判斷多個條件</span><br>
+            <span>範例：</span>
+         </p>
+         <pre><code>a = 1
+b = 2
+c = 3
+if not a&gt;b and not b&gt;c or c&gt;a and c&gt;b:
+    print("it's true")
+    
+Output :
+it's true
+</code></pre>
+         <pre><code>解析：
+not a&gt;b and not b&gt;c or c&gt;a and c&gt;b
+
+a&gt;b -&gt; False 
+b&gt;c -&gt; False
+c&gt;a -&gt; True
+c&gt;b -&gt; True
+
+not 優先處理：
+not a&gt;b -&gt; True
+not b&gt;c -&gt; True
+
+and 第二處理：
+True and True -&gt; True  # (not a&gt;b) and (not b&gt;c)
+True and True -&gt; True  # (c&gt;a) and (c&gt;b)
+
+or 最後處理：
+True or True -&gt; True  # ((not a&gt;b) and (not b&gt;c)) or ((c&gt;a) and (c&gt;b))
+</code></pre>
+         <table>
+            <thead>
+               <tr>
+                  <th style="text-align:center"><span>A</span></th>
+                  <th style="text-align:center"><span>B</span></th>
+                  <th style="text-align:center"><span>A and B</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table>
+            <thead>
+               <tr>
+                  <th style="text-align:center"><span>A</span></th>
+                  <th style="text-align:center"><span>B</span></th>
+                  <th style="text-align:center"><span>A or B</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table>
+            <thead>
+               <tr>
+                  <th style="text-align:center"><span>A</span></th>
+                  <th style="text-align:center"><span>not A</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="text-align:center"><span>True</span></td>
+                  <td style="text-align:center"><span>False</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>False</span></td>
+                  <td style="text-align:center"><span>True</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="amp----" data-id="amp----"><a class="anchor hidden-xs" href="#amp----" title="amp----"><span class="octicon octicon-link"></span></a><span>&amp; , | , ~</span></h3>
+         <p><span>&amp; , | , ~ 在Python是用來做位元運算的工具</span><br>
+            <span>用法：將int轉為二進位進行運算</span>
+         </p>
+         <pre><code>a = 100
+# 100 = 64 + 32 + 4
+# 0b01100100 = 100
+b = 148
+# 148 = 128 + 16 + 4
+# 0b10010100 = 148
+c = a &amp; b
+d = a | b
+e = ~a 
+f = ~b
+print(c,d,e,f)
+
+Output :
+4 244 -101 -149
+</code></pre>
+         <pre><code>對每位進行 &amp; 運算：
+   01100100
+   10010100
+-&gt; 00000100
+
+對每位進行 | 運算：
+   01100100
+   10010100
+-&gt; 11110100
+</code></pre>
+         <p><strong><span>Note:</span></strong><span>  ~num = -(num+1)</span></p>
+         <table>
+            <thead>
+               <tr>
+                  <th style="text-align:center"><span>A</span></th>
+                  <th style="text-align:center"><span>B</span></th>
+                  <th style="text-align:center"><span>A &amp; B</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table>
+            <thead>
+               <tr>
+                  <th style="text-align:center"><span>A</span></th>
+                  <th style="text-align:center"><span>B</span></th>
+                  <th style="text-align:center"><span>A | B</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="-xor-operator" data-id="-xor-operator"><a class="anchor hidden-xs" href="#-xor-operator" title="-xor-operator"><span class="octicon octicon-link"></span></a><span>^ (xor operator)</span></h3>
+         <pre><code>a = 1
+b = 0
+print(a^a,end=" , ")
+print(b^b,end=" , ")
+print(a^b,end=" , ")
+print(b^a,end="   ")
+
+Output :
+0 , 0 , 1 , 1
+</code></pre>
+         <p><strong><span>只要 a 與 b 相同， a^b 就會為 0</span></strong></p>
+         <table>
+            <thead>
+               <tr>
+                  <th style="text-align:center"><span>A</span></th>
+                  <th style="text-align:center"><span>B</span></th>
+                  <th style="text-align:center"><span>A ^ B</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+                  <td style="text-align:center"><span>1</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+                  <td style="text-align:center"><span>0</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="迴圈for--while" data-id="迴圈for--while"><a class="anchor hidden-xs" href="#迴圈for--while" title="迴圈for--while"><span class="octicon octicon-link"></span></a><span>迴圈(for , while)</span></h2>
+         <h3 id="for" data-id="for"><a class="anchor hidden-xs" href="#for" title="for"><span class="octicon octicon-link"></span></a><span>for</span></h3>
+         <p><span>語法：</span></p>
+         <pre><code>for 變數 條件 :
+    內容
+</code></pre>
+         <p><span>用法範例：</span></p>
+         <pre><code>for i in range(10):
+    print(i , end = " ")
+    
+Output:
+0 1 2 3 4 5 6 7 8 9
+</code></pre>
+         <p><span>在範例中， i 是宣告的變數名稱，當我們在 for loop 後面加上 print(i) 後，會輸出 9</span><br>
+            <strong><span>Note :</span></strong><span> in 跟 range 都是 python 中常見的 keyword ，要知道用法</span>
+         </p>
+         <h3 id="range" data-id="range"><a class="anchor hidden-xs" href="#range" title="range"><span class="octicon octicon-link"></span></a><span>range</span></h3>
+         <table>
+            <thead>
+               <tr>
+                  <th style="text-align:center"><span>range(n)</span></th>
+                  <th style="text-align:center"><span>從整數 0 到 n-1</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="text-align:center"><span>range(n , m)</span></td>
+                  <td style="text-align:center"><span>從整數 n 到 m-1</span></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center"><span>range(n , m , s)</span></td>
+                  <td style="text-align:center"><span>從整數 n 到 m-1 ，間隔為 s</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <p><span>用法範例：</span></p>
+         <pre><code>for i in range(1,10,2):
+    print(i , end = " ")
+
+Output:
+1 3 5 7 9
+</code></pre>
+         <h3 id="while" data-id="while"><a class="anchor hidden-xs" href="#while" title="while"><span class="octicon octicon-link"></span></a><span>while</span></h3>
+         <p><span>語法：</span></p>
+         <pre><code>while 條件 :
+    內容
+</code></pre>
+         <p><span>用法範例：</span></p>
+         <pre><code>i = 0
+while i in range(10):
+    print(i , end = " ")
+    i += 1
+    
+Output:
+0 1 2 3 4 5 6 7 8 9
+</code></pre>
+         <p><span>範例 2 ：</span></p>
+         <pre><code>i = 0
+while True :
+    if i &gt; 9 :
+        break
+    print(i , end = " ")
+    i += 1
+</code></pre>
+         <p><span>如果不事先宣告 i 的話 ， python 會因為找不到 i 而引發 NameError ，因此使用 while 前需要多加注意；另外還有第二個要注意的點就是要避免 while 進入到無窮迴圈</span></p>
+         <p><span>無窮迴圈範例：</span></p>
+         <pre><code>i = 0
+while i in range(10):
+    print(i , end = " ")
+    # i += 1
+</code></pre>
+         <p><span>因為 while 會執行到條件錯誤為止，所以當我們將 i+=1 註解時， i 就會永遠是 0 ，這時候程式碼就會進入到一個無窮迴圈</span></p>
+         <h3 id="else-搭配-loop" data-id="else-搭配-loop"><a class="anchor hidden-xs" href="#else-搭配-loop" title="else-搭配-loop"><span class="octicon octicon-link"></span></a><span>else 搭配 loop</span></h3>
+         <p><span>跟在 loop 後的 else 會在迴圈</span><strong><span>正常</span></strong><span>結束時執行</span><br>
+            <span>但如果迴圈中有 </span><strong><span>break</span></strong><span> 執行，那麼 else 內的程式碼將不會被執行</span>
+         </p>
+         <p><span>範例：</span></p>
+         <pre><code>i = 0
+while i &lt; 4 :
+    i += 1
+    print(i)
+else : 
+    print("end")
+    
+Output :
+1
+2
+3
+4
+end
+</code></pre>
+         <p><span>範例：</span></p>
+         <pre><code>i = 0
+while True :
+    if(i &gt; 4) :
+        break
+    i += 1
+    print(i)
+else : 
+    print("end")
+    
+Output :
+1
+2
+3
+4
+5
+</code></pre>
+         <h2 id="基礎資料結構介紹" data-id="基礎資料結構介紹"><a class="anchor hidden-xs" href="#基礎資料結構介紹" title="基礎資料結構介紹"><span class="octicon octicon-link"></span></a><span>基礎資料結構介紹</span></h2>
+         <p><span>List , Tuple , Dictionary , Set 是 python 中常用的資料結構，下面會一一介紹</span></p>
+         <h3 id="List" data-id="List"><a class="anchor hidden-xs" href="#List" title="List"><span class="octicon octicon-link"></span></a><span>List</span></h3>
+         <p><strong><span>初始化</span></strong><span>：</span></p>
+         <pre><code># list 名稱可以自訂
+list = []
+temp = [1 , 2]
+</code></pre>
+         <blockquote>
+            <p><strong><span>list index</span></strong><span> 算法： list [0] , list [1] , list [2] , list [3] …</span><br>
+               <span>最後一個 index 值為 -1 ，以此類推倒數第 n 個 index 就是 -n</span>
+            </p>
+         </blockquote>
+         <p><strong><span>list 基礎操作</span></strong><span>：</span></p>
+         <pre><code>print(list) # 印出list內所有元素
+print(temp[0]) # 印出temp的第一個元素
+l = len(list) # list 內元素個數
+del temp[1] # 刪除第二個元素
+temp.append(3) # 在 temp 的末端加入 3
+temp.insert(1 , 7) # 在第 2 (1+1) 個位置插入 7
+print(temp.count(1)) # 輸出temp內有幾個 1
+temp.sort() # 按照大小排序
+m = max(temp) # temp 中最大值
+n = min(temp) # temp 中最小值
+</code></pre>
+         <p><span>List 還有很多內建 function 可以在 Python 的 function 庫中查詢</span></p>
+         <blockquote>
+            <p><strong><span>Note :</span></strong><span> List 內的資料型態不一定是相同的</span><br>
+               <span>當資料型態不同時，使用 sort function 時要注意 TypeError</span>
+            </p>
+         </blockquote>
+         <p><span>print list 用法範例：</span></p>
+         <pre><code>list = [1 , "LIST" , 20.87 , True]
+print(list) # 法一
+
+print('[' , end = "") # 法二
+for ele in list:           
+    print(ele , end = "  ")
+print(']')
+
+print('[' , end = "") # 法三
+for i in range(len(list)):           
+    print(list[i] , end = "  ")
+print(']')
+
+Output:
+[1, 'LIST', 20.87, True]
+[1  LIST  20.87  True  ]
+[1  LIST  20.87  True  ]
+</code></pre>
+         <p><span>將其他資料型態轉為 list :</span></p>
+         <pre><code>list(tuple)  -&gt; change data type from tuple to list
+list(string) -&gt; [s[0], s[1], s[2], ... , s[len(string)] ]
+list(range)  -&gt; [front , ... , end]
+</code></pre>
+         <p><span>用法範例：</span></p>
+         <pre><code>str = "input"
+# str = input()
+ran = range(1,16,2)
+
+print(list(str))
+print(list(ran))
+    
+Output:
+['i', 'n', 'p', 'u', 't']
+[1, 3, 5, 7, 9, 11, 13, 15]
+</code></pre>
+         <h3 id="Tuple" data-id="Tuple"><a class="anchor hidden-xs" href="#Tuple" title="Tuple"><span class="octicon octicon-link"></span></a><span>Tuple</span></h3>
+         <p><span>tuple 是一種跟 list 類似卻不能直接修改元素的一種資料型態</span></p>
+         <p><strong><span>初始化</span></strong><span>：</span></p>
+         <pre><code># tuple 名稱可以自訂
+tuple1 = ()
+tuple2 = (1 ,)
+tuple3 =  1.,
+tuple4 = (1, 2, 3 ,4)
+tuple5 =  1, 2 ,3 ,4
+list = [tuple1,tuple2,tuple3,tuple4,tuple5]
+
+for ele in list :
+    print(ele)
+
+Output :
+()
+(1,)
+(1.0,)
+(1, 2, 3, 4)
+(1, 2, 3, 4)
+</code></pre>
+         <blockquote>
+            <p><strong><span>Note :</span></strong><span> 初始一個元素的 tuple 的語法需要加上 ’ </span><strong><span>,</span></strong><span> ’</span><br>
+               <span>以 tuple3 為例，如果沒有加 ， 1.0 會變成 float 的資料型態，而不是 tuple</span>
+            </p>
+         </blockquote>
+         <p><strong><span>tuple 基礎操作</span></strong><span>：</span></p>
+         <pre><code>print(tuple5) # 印出list內所有元素
+print(tuple5[0]) # 印出temp的第一個元素
+l = len(tuple) # list 內元素個數
+print(tuple5.count(1)) # 輸出tuple5內有幾個 1
+</code></pre>
+         <blockquote>
+            <p><span>因為 tuple 沒有 append() function 跟 del ， 但是可以用 use “tuple + (1, 10)” 或 “tuple * 2”，也可以將 tuple 轉為 list 後更改元素再轉換回來</span></p>
+         </blockquote>
+         <p><span>其餘用法都與 list 相似</span></p>
+         <p><span>將其他資料型態轉為 tuple :</span></p>
+         <pre><code>tuple(list) -&gt; change data type from list to tuple 
+tuple(string) -&gt; (s[0], s[1], s[2], ... , s[len(string)])
+tuple(range)  -&gt; (front , ... , end)
+</code></pre>
+         <h3 id="dict--Dictionary-" data-id="dict--Dictionary-"><a class="anchor hidden-xs" href="#dict--Dictionary-" title="dict--Dictionary-"><span class="octicon octicon-link"></span></a><span>dict ( Dictionary )</span></h3>
+         <p><strong><span>初始化</span></strong><span>：</span></p>
+         <pre><code># dict 名稱可以自訂
+dict1 = {} 
+dict2 = {"cat": "chat", "dog": "chien"}
+dict3((1,2),(3,4)) # dict3 = {1:2, 3:4}
+# {key : value}
+</code></pre>
+         <blockquote>
+            <p><span>在 print dictionary 時輸出順序可能會改變，這是因為 dict 會自動排序元素</span></p>
+         </blockquote>
+         <p><strong><span>dict 基礎操作</span></strong><span>：</span></p>
+         <pre><code>print(dict.keys())    # 已自動排序
+print(dict.values())
+for i, j in dictionary.items() : # i : key , j : value
+    print(i , " : " , j)
+    
+adding new item in dictionary : 
+# 法一 : 
+dictionary.update({key : value}) 
+# 法二 : 
+dictionart[key] = value
+
+removing key : 
+# 法一 : 
+del dictionary[key] 
+# 法二 : 
+dictionary.popitem() 
+# Notice: In Python version before 3.6.7 ,popitem() will randomly pop item
+
+dictionary.clear() : clear all items in dictionary
+dic2 = dic1.copy() : copy items in dic1 (dic2 is dic1 == False)
+</code></pre>
+         <h3 id="Set" data-id="Set"><a class="anchor hidden-xs" href="#Set" title="Set"><span class="octicon octicon-link"></span></a><span>Set</span></h3>
+         <p><strong><span>初始化</span></strong><span>：</span></p>
+         <pre><code>set1 = set()
+set2 = {1 , 2 , 3}
+</code></pre>
+         <blockquote>
+            <p><strong><span>Note :</span></strong><span> 空 set 的宣告要用 set()</span></p>
+         </blockquote>
+         <p><strong><span>set 基礎操作</span></strong><span>：</span></p>
+         <pre><code>
+</code></pre>
+         <h2 id="Error-Type" data-id="Error-Type"><a class="anchor hidden-xs" href="#Error-Type" title="Error-Type"><span class="octicon octicon-link"></span></a><span>Error Type</span></h2>
+         <p><span>列出 error 列表程式碼：</span></p>
+         <pre><code>def print_exception_tree(thisclass, nest = 0):
+    if nest &gt; 1:
+        print("   |" * (nest - 1), end="")
+    if nest &gt; 0:
+        print("   +---", end="")
+    print(thisclass.__name__)
+    for subclass in thisclass.__subclasses__():
+        print_exception_tree(subclass, nest + 1)
+
+print_exception_tree(BaseException)
+</code></pre>
+         <h3 id="try-amp-except" data-id="try-amp-except"><a class="anchor hidden-xs" href="#try-amp-except" title="try-amp-except"><span class="octicon octicon-link"></span></a><span>try &amp; except</span></h3>
+         <p><span>配合上面提到的 error type 來進行操作</span></p>
+         <p><span>try : 想執行的程式碼</span><br>
+            <span>except : 發生錯誤時會執行的程式碼（可指定錯誤）</span>
+         </p>
+         <p><span>範例：</span></p>
+         <pre><code>
+</code></pre>
+         <p><span>也可以搭配 else , finally 做使用</span></p>
+         <p><span>else : 若 except 未執行，try 結束後便會執行</span><br>
+            <span>finally : 不管有沒有錯誤都會執行</span>
+         </p>
+         <p><span>範例：</span></p>
+         <pre><code>
+</code></pre>
+         <style>
+            html, body, .ui-content {
+            background-color: #333;
+            color: #ddd;
+            }
+            body > .ui-infobar {
+            display: none;
+            }
+            .ui-view-area > .ui-infobar {
+            display: block;
+            }
+            .markdown-body h1,
+            .markdown-body h2,
+            .markdown-body h3,
+            .markdown-body h4,
+            .markdown-body h5,
+            .markdown-body h6 {
+            color: #ddd;
+            }
+            .markdown-body h1,
+            .markdown-body h2 {
+            border-bottom-color: #ffffff69;
+            }
+            .markdown-body h1 .octicon-link,
+            .markdown-body h2 .octicon-link,
+            .markdown-body h3 .octicon-link,
+            .markdown-body h4 .octicon-link,
+            .markdown-body h5 .octicon-link,
+            .markdown-body h6 .octicon-link {
+            color: #fff;
+            }
+            .markdown-body img {
+            background-color: transparent;
+            }
+            .ui-toc-dropdown .nav>.active:focus>a, .ui-toc-dropdown .nav>.active:hover>a, .ui-toc-dropdown .nav>.active>a {
+            color: white;
+            border-left: 2px solid white;
+            }
+            .expand-toggle:hover, 
+            .expand-toggle:focus, 
+            .back-to-top:hover, 
+            .back-to-top:focus, 
+            .go-to-bottom:hover, 
+            .go-to-bottom:focus {
+            color: white;
+            }
+            .ui-toc-dropdown {
+            background-color: #333;
+            }
+            .ui-toc-label.btn {
+            background-color: #191919;
+            color: white;
+            }
+            .ui-toc-dropdown .nav>li>a:focus, 
+            .ui-toc-dropdown .nav>li>a:hover {
+            color: white;
+            border-left: 1px solid white;
+            }
+            .markdown-body blockquote {
+            color: #bcbcbc;
+            }
+            .markdown-body table tr {
+            background-color: #5f5f5f;
+            }
+            .markdown-body table tr:nth-child(2n) {
+            background-color: #4f4f4f;
+            }
+            .markdown-body code,
+            .markdown-body tt {
+            color: #eee;
+            background-color: rgba(230, 230, 230, 0.36);
+            }
+            a,
+            .open-files-container li.selected a {
+            color: #5EB7E0;
+            }
+         </style>
+      </div>
+      <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+         <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+            <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+               <div class="toc">
+                  <ul class="nav">
+                     <li>
+                        <a href="#Python-基礎教學" title="Python  基礎教學">Python  基礎教學</a>
+                        <ul class="nav">
+                           <li><a href="#個人網站" title="個人網站">個人網站</a></li>
+                           <li>
+                              <a href="#變數型態" title="變數型態">變數型態</a>
+                              <ul class="nav">
+                                 <li><a href="#int" title="int">int</a></li>
+                                 <li><a href="#float" title="float">float</a></li>
+                                 <li><a href="#string" title="string">string</a></li>
+                                 <li><a href="#bool" title="bool">bool</a></li>
+                                 <li><a href="#變數宣告" title="變數宣告">變數宣告</a></li>
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#函式介紹function" title="函式介紹(function)">函式介紹(function)</a>
+                              <ul class="nav">
+                                 <li><a href="#print" title="print()">print()</a></li>
+                                 <li><a href="#input" title="input()">input()</a></li>
+                                 <li><a href="#其他-build-in-functions" title="其他 build-in functions:">其他 build-in functions:</a></li>
+                                 <li><a href="#自訂function" title="自訂function">自訂function</a></li>
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#基本-Operator-介紹-（加減乘除）" title="基本 Operator 介紹 （加減乘除）">基本 Operator 介紹 （加減乘除）</a>
+                              <ul class="nav">
+                                 <li><a href="#tip1" title="+">+</a></li>
+                                 <li><a href="#-" title="-">-</a></li>
+                                 <li><a href="#tip2" title="*">*</a></li>
+                                 <li><a href="#tip3" title="/">/</a></li>
+                                 <li><a href="#tip4" title="**">**</a></li>
+                                 <li><a href="#tip5" title="//">//</a></li>
+                                 <li><a href="#tip6" title="%">%</a></li>
+                                 <li><a href="#比較operator" title="比較operator">比較operator</a></li>
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#if-else-用法" title="if-else 用法">if-else 用法</a>
+                              <ul class="nav">
+                                 <li><a href="#and--or--not" title="and , or , not">and , or , not</a></li>
+                                 <li><a href="#amp----" title="&amp; , | , ~">&amp; , | , ~</a></li>
+                                 <li><a href="#-xor-operator" title="^ (xor operator)">^ (xor operator)</a></li>
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#迴圈for--while" title="迴圈(for , while)">迴圈(for , while)</a>
+                              <ul class="nav">
+                                 <li><a href="#for" title="for">for</a></li>
+                                 <li><a href="#range" title="range">range</a></li>
+                                 <li><a href="#while" title="while">while</a></li>
+                                 <li><a href="#else-搭配-loop" title="else 搭配 loop">else 搭配 loop</a></li>
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#基礎資料結構介紹" title="基礎資料結構介紹">基礎資料結構介紹</a>
+                              <ul class="nav">
+                                 <li><a href="#List" title="List">List</a></li>
+                                 <li><a href="#Tuple" title="Tuple">Tuple</a></li>
+                                 <li><a href="#dict--Dictionary-" title="dict ( Dictionary )">dict ( Dictionary )</a></li>
+                                 <li><a href="#Set" title="Set">Set</a></li>
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#Error-Type" title="Error Type">Error Type</a>
+                              <ul class="nav">
+                                 <li><a href="#try-amp-except" title="try &amp; except">try &amp; except</a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+            </ul>
+         </div>
+      </div>
+      <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+         <div class="toc">
+            <ul class="nav">
+               <li>
+                  <a href="#Python-基礎教學" title="Python  基礎教學">Python  基礎教學</a>
+                  <ul class="nav">
+                     <li><a href="#個人網站" title="個人網站">個人網站</a></li>
+                     <li>
+                        <a href="#變數型態" title="變數型態">變數型態</a>
+                        <ul class="nav">
+                           <li><a href="#int" title="int">int</a></li>
+                           <li><a href="#float" title="float">float</a></li>
+                           <li><a href="#string" title="string">string</a></li>
+                           <li><a href="#bool" title="bool">bool</a></li>
+                           <li><a href="#變數宣告" title="變數宣告">變數宣告</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#函式介紹function" title="函式介紹(function)">函式介紹(function)</a>
+                        <ul class="nav">
+                           <li><a href="#print" title="print()">print()</a></li>
+                           <li><a href="#input" title="input()">input()</a></li>
+                           <li><a href="#其他-build-in-functions" title="其他 build-in functions:">其他 build-in functions:</a></li>
+                           <li><a href="#自訂function" title="自訂function">自訂function</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#基本-Operator-介紹-（加減乘除）" title="基本 Operator 介紹 （加減乘除）">基本 Operator 介紹 （加減乘除）</a>
+                        <ul class="nav">
+                           <li><a href="#tip1" title="+">+</a></li>
+                           <li><a href="#-" title="-">-</a></li>
+                           <li><a href="#tip2" title="*">*</a></li>
+                           <li><a href="#tip3" title="/">/</a></li>
+                           <li><a href="#tip4" title="**">**</a></li>
+                           <li><a href="#tip5" title="//">//</a></li>
+                           <li><a href="#tip6" title="%">%</a></li>
+                           <li><a href="#比較operator" title="比較operator">比較operator</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#if-else-用法" title="if-else 用法">if-else 用法</a>
+                        <ul class="nav">
+                           <li><a href="#and--or--not" title="and , or , not">and , or , not</a></li>
+                           <li><a href="#amp----" title="&amp; , | , ~">&amp; , | , ~</a></li>
+                           <li><a href="#-xor-operator" title="^ (xor operator)">^ (xor operator)</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#迴圈for--while" title="迴圈(for , while)">迴圈(for , while)</a>
+                        <ul class="nav">
+                           <li><a href="#for" title="for">for</a></li>
+                           <li><a href="#range" title="range">range</a></li>
+                           <li><a href="#while" title="while">while</a></li>
+                           <li><a href="#else-搭配-loop" title="else 搭配 loop">else 搭配 loop</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#基礎資料結構介紹" title="基礎資料結構介紹">基礎資料結構介紹</a>
+                        <ul class="nav">
+                           <li><a href="#List" title="List">List</a></li>
+                           <li><a href="#Tuple" title="Tuple">Tuple</a></li>
+                           <li><a href="#dict--Dictionary-" title="dict ( Dictionary )">dict ( Dictionary )</a></li>
+                           <li><a href="#Set" title="Set">Set</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#Error-Type" title="Error Type">Error Type</a>
+                        <ul class="nav">
+                           <li><a href="#try-amp-except" title="try &amp; except">try &amp; except</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+      <script>
+         var markdown = $(".markdown-body");
+         //smooth all hash trigger scrolling
+         function smoothHashScroll() {
+             var hashElements = $("a[href^='#']").toArray();
+             for (var i = 0; i < hashElements.length; i++) {
+                 var element = hashElements[i];
+                 var $element = $(element);
+                 var hash = element.hash;
+                 if (hash) {
+                     $element.on('click', function (e) {
+                         // store hash
+                         var hash = this.hash;
+                         if ($(hash).length <= 0) return;
+                         // prevent default anchor click behavior
+                         e.preventDefault();
+                         // animate
+                         $('body, html').stop(true, true).animate({
+                             scrollTop: $(hash).offset().top
+                         }, 100, "linear", function () {
+                             // when done, add hash to url
+                             // (default click behaviour)
+                             window.location.hash = hash;
+                         });
+                     });
+                 }
+             }
+         }
+         
+         smoothHashScroll();
+         var toc = $('.ui-toc');
+         var tocAffix = $('.ui-affix-toc');
+         var tocDropdown = $('.ui-toc-dropdown');
+         //toc
+         tocDropdown.click(function (e) {
+             e.stopPropagation();
+         });
+         
+         var enoughForAffixToc = true;
+         
+         function generateScrollspy() {
+             $(document.body).scrollspy({
+                 target: ''
+             });
+             $(document.body).scrollspy('refresh');
+             if (enoughForAffixToc) {
+                 toc.hide();
+                 tocAffix.show();
+             } else {
+                 tocAffix.hide();
+                 toc.show();
+             }
+             $(document.body).scroll();
+         }
+         
+         function windowResize() {
+             //toc right
+             var paddingRight = parseFloat(markdown.css('padding-right'));
+             var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+             toc.css('right', right + 'px');
+             //affix toc left
+             var newbool;
+             var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+             //for ipad or wider device
+             if (rightMargin >= 133) {
+                 newbool = true;
+                 var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                 var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                 tocAffix.css('left', left + 'px');
+             } else {
+                 newbool = false;
+             }
+             if (newbool != enoughForAffixToc) {
+                 enoughForAffixToc = newbool;
+                 generateScrollspy();
+             }
+         }
+         $(window).resize(function () {
+             windowResize();
+         });
+         $(document).ready(function () {
+             windowResize();
+             generateScrollspy();
+         });
+         
+         //remove hash
+         function removeHash() {
+             window.location.hash = '';
+         }
+         
+         var backtotop = $('.back-to-top');
+         var gotobottom = $('.go-to-bottom');
+         
+         backtotop.click(function (e) {
+             e.preventDefault();
+             e.stopPropagation();
+             if (scrollToTop)
+                 scrollToTop();
+             removeHash();
+         });
+         gotobottom.click(function (e) {
+             e.preventDefault();
+             e.stopPropagation();
+             if (scrollToBottom)
+                 scrollToBottom();
+             removeHash();
+         });
+         
+         var toggle = $('.expand-toggle');
+         var tocExpand = false;
+         
+         checkExpandToggle();
+         toggle.click(function (e) {
+             e.preventDefault();
+             e.stopPropagation();
+             tocExpand = !tocExpand;
+             checkExpandToggle();
+         })
+         
+         function checkExpandToggle () {
+             var toc = $('.ui-toc-dropdown .toc');
+             var toggle = $('.expand-toggle');
+             if (!tocExpand) {
+                 toc.removeClass('expand');
+                 toggle.text('Expand all');
+             } else {
+                 toc.addClass('expand');
+                 toggle.text('Collapse all');
+             }
+         }
+         
+         function scrollToTop() {
+             $('body, html').stop(true, true).animate({
+                 scrollTop: 0
+             }, 100, "linear");
+         }
+         
+         function scrollToBottom() {
+             $('body, html').stop(true, true).animate({
+                 scrollTop: $(document.body)[0].scrollHeight
+             }, 100, "linear");
+         }
+      </script>
+   </body>
+</html>
