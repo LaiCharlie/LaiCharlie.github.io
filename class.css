@@ -34,8 +34,6 @@ section {
     position: relative;
 }
 
-
-
 h1 {
     color: #fff;
 }
@@ -50,15 +48,45 @@ p {
 }
 
 .cen {
+    display: block;
     text-align: center;
-    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+.cen:hover {
+    background-color: #838383; 
+    color: #333;
+}
+
+.boxx {
+    display: block;
+    text-align: center;
+    width: 10%;
+    padding: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boxx:hover {
+    background-color: #555555;
+    color: #333;
+}
 
 .wrapper {
     flex-grow: 1;
+    /* display: flex; */
+    /* flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
 } 
-
 
 .footer {
     bottom: 100px;
