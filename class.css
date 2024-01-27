@@ -16,8 +16,8 @@ body {
 }
 
 header {
-    position: fixed;
-    width: 100%;
+    /* position: fixed;
+    width: 100%; */
     text-align: center;
     padding: 20px;
     background-image: url('ocean.jpeg');
@@ -27,7 +27,7 @@ header {
 
 
 section {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     position: relative;
@@ -83,8 +83,8 @@ p {
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-image: url('head.jpg');
     background-size: cover;
     border-radius: 50%;
@@ -98,6 +98,7 @@ p {
 #circle:hover {
     filter: brightness(90%);
 }
+
 #menu {
     position: fixed;
     top: 0;
