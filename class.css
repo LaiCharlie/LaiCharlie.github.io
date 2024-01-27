@@ -25,13 +25,16 @@ header {
     background-position: center;
 }
 
-
 section {
-    max-width: 500px;
+    width: 60%;
+    min-width: 300px;
     margin: 0 auto;
     padding: 20px;
+    border: 2px solid #fff;
     position: relative;
 }
+
+
 
 h1 {
     color: #fff;
@@ -63,21 +66,6 @@ p {
     background-color: rgb(0, 0, 0);
 }   
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.box {
-    width: 50%;
-    max-width: 400px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
 
 #circle {
     position: fixed;
