@@ -42,22 +42,25 @@ h2 {
     color: #ccc;
 }
 
+h3 {
+    color: #b2b2b2;
+}
 
 p {
     color: #999;
 }
 
-/* .centext {
+.centext {
     color: #fff;
     text-align: center;
-} */
+}
 
-.centext {
+/* .centext {
     margin-top: 10px;
     text-decoration: none;
     color: #fff;
     font-size: 16px;
-}
+} */
 
 .cen {
     display: block;
@@ -94,7 +97,7 @@ p {
 
 .container {
     text-align: center;
-    padding-left: 15%;
+    padding-left: 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -104,19 +107,46 @@ p {
 .wrapper {
     flex-grow: 1;
     /* display: flex; */
-    /* flex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center; */
+    align-items: center;
 } 
 
 
 .mainbox {
     display: flex;
+    width: 20%;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     border: 1px solid #fff;
     position: relative;
+}
+
+.boxxx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boxxx h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.boxxx:hover {
+    background-color: #555555;
+    color: #333;
 }
 
 
@@ -127,10 +157,11 @@ p {
 }   
 
 #circle {
+    margin-top: 5%;
     top: 20px;
     right: 20px;
-    width: 150px;
-    height: 150px;
+    width: 10vw;
+    height: 10vw;
     background-image: url('images/head.jpg');
     background-size: cover;
     border-radius: 50%;
