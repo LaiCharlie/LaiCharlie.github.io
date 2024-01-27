@@ -16,12 +16,15 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100%;
     text-align: center;
     padding: 20px;
     background-image: url('ocean.jpeg');
     background-size: cover;
     background-position: center;
 }
+
 
 section {
     max-width: 600px;
@@ -48,9 +51,11 @@ p {
     padding: 15px;
 }
 
+
 .wrapper {
     flex-grow: 1;
-}
+} 
+
 
 .footer {
     bottom: 100px;
