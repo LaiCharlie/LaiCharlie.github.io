@@ -121,7 +121,7 @@ p {
     position: relative;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
     .mainbox {
         display: none;
     }
