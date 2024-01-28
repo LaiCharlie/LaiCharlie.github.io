@@ -103,6 +103,16 @@ p {
     align-items: center;
 }
 
+.mainbox {
+    flex: 0 0 20%; /* Fixed width of 30% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    position: relative;
+}
+
 .wrapper {
     flex-grow: 1;
     /* display: flex; */
@@ -110,16 +120,6 @@ p {
     justify-content: space-between;
     align-items: center;
 } 
-
-.mainbox {
-    display: flex;
-    width: 20%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #fff;
-    position: relative;
-}
 
 @media (max-width: 750px) {
     .mainbox {
