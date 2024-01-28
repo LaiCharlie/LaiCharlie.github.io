@@ -180,8 +180,8 @@ p {
 #menu {
     position: fixed;
     top: 0;
-    left: -15%;
-    width: 15%;
+    left: -20%;
+    width: 20%;
     height: 100%;
     background-color: #4d4d4d;
     opacity: 0.8;

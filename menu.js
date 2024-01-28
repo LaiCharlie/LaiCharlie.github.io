@@ -5,9 +5,10 @@ function toggleMenu() {
     var menuIcon = document.getElementById('menu-icon');
 
     if (menuIsVisible) {
-        menu.style.left = '-250px';
+        menu.style.left = '-500px';
         menuIcon.style.transform = 'rotate(0deg)';
-    } else {
+    } 
+    else {
         menu.style.left = '0px';
         menuIcon.style.transform = 'rotate(90deg)';
     }
