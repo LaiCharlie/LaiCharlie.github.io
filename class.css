@@ -55,12 +55,10 @@ p {
     text-align: center;
 }
 
-/* .centext {
-    margin-top: 10px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-} */
+.lefttext {
+    text-align: left;
+    color: #999;
+}
 
 .cen {
     display: block;
@@ -96,6 +94,7 @@ p {
 }
 
 .container {
+    flex-grow: 1;
     text-align: center;
     padding-left: 10%;
     display: flex;
@@ -112,13 +111,12 @@ p {
     align-items: center;
 } 
 
-
 .mainbox {
     display: flex;
     width: 20%;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     border: 1px solid #fff;
     position: relative;
 }
