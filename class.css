@@ -121,6 +121,12 @@ p {
     position: relative;
 }
 
+@media (max-width: 500px) {
+    .mainbox {
+        display: none;
+    }
+}
+
 .boxxx {
     display: flex;
     align-items: center;
