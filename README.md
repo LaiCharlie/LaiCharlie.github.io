@@ -1,2 +1,2 @@
 # web
- bio website
+ bio website : https://laicharlie.github.io
